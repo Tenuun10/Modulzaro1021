@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form th:action="@{newOrder}" method="post">
+    <label>From:
+        <input th:field="*{newOrder.fromWhere}">
+    </label>
+    <label>Product:
+        <input th:field="*{newOrder.what}">
+    </label>
+    <label>price:
+        <input th:field="*{newOrder.price}">
+    </label>
+    <label>person_id:
+        <input th:field="*{newOrder.person_id}">
+
+    </label>
+</form>
+
+
+</body>
+</html>

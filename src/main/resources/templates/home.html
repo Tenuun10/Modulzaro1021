@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomePage</title>
+</head>
+<body>
+
+<a th:href="@{/orders}">Orders</a>
+<a th:href="@{/people}">People</a>
+<a th:href="@{/people_update}">Update</a>
+
+<table>
+    <thead>
+    <tr>
+        <td>Name</td>
+        <td>Birth Place</td>
+        <td>Birth Date</td>
+        <td>Email</td>
+        <td></td>
+    </tr>
+    </thead>
+    <tr th:each="actual:${showPeople}">
+        <td th:text="${actual.id}"></td>
+        <td th:text="${actual.name}"></td>
+        <td  th:text="${actual.birthPlace}"></td>
+        <td th:text="${actual.birthDate}"></td>
+        <td th:text="${actual.email}"></td>
+    </tr>
+</table>
+
+<table>
+    <thead>
+    <tr>
+        <td>From</td>
+        <td>Product</td>
+        <td>Price</td>
+        <td>person_id</td>
+        <td></td>
+    </tr>
+    </thead>
+    <tr th:each="actual:${showOrders}">
+        <td th:text="${actual.fromWhere}"></td>
+        <td  th:text="${actual.what}"></td>
+        <td th:text="${actual.price}"></td>
+        <td th:text="${actual.person_id}"></td>
+    </tr>
+</table>
+
+
+
+
+
+
+</body>
+</html>

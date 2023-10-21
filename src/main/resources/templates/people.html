@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>People</title>
+</head>
+<body>
+
+<form th:action="@{/add}" method="post">
+    <input type="text" th:field="*{add.name}" >
+    <input type="text" th:field="*{add.birthPlace}">
+    <input type="date" th:field="*{add.birthDate}"  >
+    <input type="text" th:field="*{add.email}" >
+    <button type="submit">Adjadneki</button>
+</form>
+
+</body>
+</html>
